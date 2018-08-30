@@ -1,0 +1,38 @@
+#!/bin/bash
+
+TIMECOLOR="00FFFFFF"
+TIMEFONT="San Francisco"
+TIMESIZE=60
+TIMESTYLE="%H:%M:%S"
+DATECOLOR="00FFFFFF"
+DATEFONT="Space Age"
+DATESIZE=25
+DATESTYLE="%A, %d %b"
+# Ring Colors
+VERIFYING_INSIDE="FFFFFF44"
+WRONG_INSIDE="FF000044"
+INSIDE="00000000"
+LINE="00000000"
+KEYPRESS="FFFFFFFF"
+BACKSPACEPRESS="CCCCCCFF"
+RINGCOLOR="F7045DFF"
+RINGVERIFYINGCOLOR="FFFFFFFF"
+RINGWRONGCOLOR="00000000"
+RINGTEXTSIZE=14
+RINGRADIUS=45
+
+
+i3lock -t -i $HOME/.rand_bg.png  -knf --force-clock\
+    --timecolor="$TIMECOLOR" --layout-align 1 --time-align 1 \ --timefont="$TIMEFONT" \
+    --datecolor="$DATECOLOR" --timepos "x+120:h-95" --datesize="$DATESIZE" \
+    --timesize="$TIMESIZE" --datestr="$DATESTYLE" -e \ --datefont="$DATEFONT" \
+    --date-align 1 --insidevercolor="$VERIFYING_INSIDE" --insidewrongcolor="$WRONG_INSIDE" \
+    --insidecolor="$INSIDE" --linecolor="$LINE" --keyhlcolor="$KEYPRESS" --bshlcolor="$BACKSPACEPRESS" \
+    --ringcolor="$RINGCOLOR" --ringvercolor="$RINGVERIFYINGCOLOR" --ringwrongcolor="$RINGWRONGCOLOR" \
+    --separatorcolor="$KEYPRESS" --indpos="x+68:h-105.5" --radius="$RINGRADIUS" --modsize=1 \
+    --timestr="$TIMESTYLE" --veriftext="" --wrongtext=""
+
+
+
+#--indicator circle does not dissapear
+#$HOME/.rand_bg.png
